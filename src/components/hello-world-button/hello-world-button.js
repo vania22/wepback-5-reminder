@@ -2,7 +2,9 @@ import './hello-world-button.css'
 import './hello-world-button.scss'
 
 class HelloWorldButton {
-    static render() {
+    pClass = 'hello-world-text'
+
+    render() {
         const body = document.querySelector('body');
         const button = document.createElement('button');
         button.innerText = 'Hello';
@@ -10,7 +12,7 @@ class HelloWorldButton {
         button.onclick = () => {
             const p = document.createElement('p');
             p.innerText = 'Lorem ipsum dolor sit amet, sectetur';
-            p.classList.add('hello-world-text');
+            p.classList.add(this.pClass);
             body.appendChild(p);
         };
 
